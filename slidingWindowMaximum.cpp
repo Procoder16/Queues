@@ -16,7 +16,7 @@ int main(){
     
     // for(int i = 0; i<=n-k; i++){
     //     int maxEle = arr[i];
-    //     for(int j = i; j <= i+2; j++){          THIS IS THE BRUTE FORCE APPROACH USING NORMAL ARRAY
+    //     for(int j = i; j <= i+2; j++){          THIS IS THE BRUTE FORCE APPROACH USING NORMAL ARRAY log(nlogn)
     //         maxEle = max(maxEle, arr[j]);
     //     }
     //     cout<<maxEle<<" ";
@@ -32,7 +32,7 @@ int main(){
         q.push_back(i);
     }
     ans.push_back(arr[q.front()]);
-    
+                                                    // THIS IS THE OPTIMISED WAY USING DEQUE IN log(n)
     for(int i = k; i< n; i++){
         if(q.front() == i - k){
             q.pop_front();
